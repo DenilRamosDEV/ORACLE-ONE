@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+</head>
+
+<body>
+    <h1>Programa para calcular los puntos de un equipo de futbol </h1>
+    <script>
+        function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+        function calcIMC(peso,altura){
+            imc=peso/(altura*altura);
+            return imc;
+        }
+
+        var nombre=prompt("ingresar tu nombre");
+        var peso=prompt("hola "+nombre+" ingrese su peso");
+        var altura=prompt("hola "+nombre+" ingrese su altura");
+
+        var imc=calcIMC(peso,altura);
+        html(nombre+" tu IMC es de: "+imc);
+        html("<br>");
+
+        if (imc<18.5) {
+            html("tu IMC esta de bajo de lo normal");
+        }else if (imc>=18.5 && imc<25) {
+            html("tu IMC es normal");
+        }else if (imc>=25 && imc<30) {
+            html("tienes sobrepeso");
+        }else if (imc>=30 && imc<40) {
+            html("tienes obesidad");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

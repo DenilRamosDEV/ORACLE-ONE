@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var pantalla=document.querySelector("canvas");
+        var pincel=pantalla.getContext("2d");
+        pincel.fillStyle="lightgrey";
+        pincel.fillRect(0,0,600,400);
+
+        function diceñarCircunferencia(x,y,radio){
+            pincel.fillStyle="blue";
+            pincel.beginPath();
+            pincel.arc(x,y,radio,0,2*Math.PI);
+            pincel.fill();
+        }
+        function limpiarPantalla(){
+            pincel.clearRect(0,0,600,400);
+        }
+        var x=0;
+        var bucle=false;
+        function imprimirCircunferencia(){
+            limpiarPantalla();
+            if (x==600) {
+                bucle=true;
+            }else if(x==0){
+                bucle=false;
+            }
+            diceñarCircunferencia(x,20,10);
+            if (bucle) {
+                x--;
+                
+            }else{
+                x++;
+            }
+        }
+        setInterval(imprimirCircunferencia,10);         
+
+        
+    </script>
+</body>
+</html>

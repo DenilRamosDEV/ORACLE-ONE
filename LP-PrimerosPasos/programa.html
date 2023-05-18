@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function html(mensaje){
+        return document.write(mensaje);
+    }//funcion para imprimir con html
+
+    var anio=2023;
+
+    var edadC=20;
+    var anioC=anio-edadC;
+    html("El año de nacimiento de Carlos es: ");
+    html(anioC);
+    html("<br>");
+    html("tiene : "+edadC+" años");
+
+    html("<br>");
+    html("<br>");
+    
+    var edadJ=22;
+    var anioJ=anio-edadJ;
+    html("El año de nacimiento de Juan es: ");
+    html(anioJ);
+    html("<br>");
+    html("tiene : "+edadJ+" años");
+    html("<br>");
+    html("<br>");
+
+
+    var promedio = Math.round((edadC+edadJ)/2);
+    html("el promedio de sus edades es: "+promedio);
+</script>

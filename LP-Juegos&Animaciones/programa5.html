@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var x = 0;
+        var xAleatorio;
+        var yAleatorio;
+        var radio=10;
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 600, 400);
+
+        function diceñarCircunferencia(x, y, radio, color) {
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, radio, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+        function limpiarPantalla() {
+            pincel.clearRect(0, 0, 600, 400);
+        }
+        function posicion(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function objetivo(x, y) {
+            diceñarCircunferencia(x, y, radio+20, "red");
+            diceñarCircunferencia(x, y, radio+10, "white");
+            diceñarCircunferencia(x, y, radio, "red");
+        }
+        
+        function imprimirCircunferencia() {
+            limpiarPantalla();
+            xAleatorio = posicion(600);
+            yAleatorio = posicion(400);
+            objetivo(xAleatorio, yAleatorio);
+            x++;
+        }
+        function disparar(evento) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+
+            if (
+                (x < xAleatorio + radio) &&
+                (x > xAleatorio - radio) &&
+                (y < yAleatorio + radio) &&
+                (y > yAleatorio - radio)) {
+                alert("le diste en el blanco");
+            }
+        }
+
+        setInterval(imprimirCircunferencia, 1000);
+        pantalla.onclick = disparar;
+
+
+    </script>
+</body>
+
+</html>

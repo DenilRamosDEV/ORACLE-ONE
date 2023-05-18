@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros pares del 1 al 100</title>
+</head>
+
+<body>
+    <h1>Numeros pares del 1 al 100</h1>
+    <script>
+        function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+        function pares(){
+            var index=0;
+            while (index<=100) {
+                if (index>0) {
+                    html(index);
+                html("<br>");
+                }
+                if (index>=100) {
+                    html("fin");
+                }
+                index+=2;
+                
+            }
+
+        }       
+
+        pares();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinacion</title>
+</head>
+
+<body>
+    <h1>Juego de Adivinacion</h1>
+    <script>
+        function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+        function limite(num) {
+            return Math.round(Math.random() * num);
+        }
+
+        var numeroLimite = parseInt(prompt("ingresa el limite"));
+        var numeroSistema = limite(numeroLimite);
+        var intentos = 3;
+        while (intentos >= 1) {
+            var numeroLanzado = parseInt(prompt("te quedan " + intentos + " intentos || ingresa un numero entre 0 y " + numeroLimite));
+
+            if (numeroSistema == numeroLanzado) {
+                alert("aserto :)");
+                html("felicidades usted aserto el numero es: " + numeroSistema);
+                break;
+            } else {
+                alert("Fallo :( ");
+                if (intentos == 1) {
+                    html("el numero corecto era el: " + numeroSistema);
+                }
+                intentos--;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

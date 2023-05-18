@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar </title>
+</head>
+
+<body>
+    <h1>Tabla de multiplicar</h1>
+    <script>
+        function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+        function multiplicar(num){
+            var index=1;
+            var limite=12;
+            while (index<=limite) {
+                html(num+" x "+index+" = "+(index*num));
+                html("<br>");
+                index++;
+            } 
+        }
+        
+        var numero=parseInt(prompt("ingresar el numero"));
+        multiplicar(numero);
+
+    </script>
+</body>
+
+</html>

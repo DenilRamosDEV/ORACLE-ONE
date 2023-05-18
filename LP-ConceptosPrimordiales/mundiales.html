@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munduales || FIFA</title>
+</head>
+
+<body>
+    <h1>Munduales || FIFA</h1>
+    <script>
+        function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+        function mundial(anio){
+            var cantidad=0;
+            var anioActual=2023;
+            for (let index=anio; index<=anioActual; index++) {
+                html(index);
+                html("<br>");    
+                index=index+3;   
+                cantidad++;
+                if (index>=anioActual) {
+                    index=index+2;
+                    html("y el prximo se celebrara dentro de "+(index-anioActual-1)+" años");
+                    html("<br>");
+                }   
+            }
+            html("en total se selebraron "+cantidad+" mundiales");
+            
+            
+        }
+
+
+        var anioMundial=1930;
+        html("el primer mundial se celebro en el año "+anioMundial);
+        html("<br>");
+        html("<br>");
+        html("los mundiales de llevanos avcavo en los siguentes año:");
+        html("<br>");
+        mundial(anioMundial);
+
+    </script>
+</body>
+
+</html>

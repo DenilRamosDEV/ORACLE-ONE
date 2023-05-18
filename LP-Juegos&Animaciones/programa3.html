@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    // function mostrarAlerta(event) {
+    //     var x = event.pageX - pantalla.offsetLeft;//restar la derecha 
+    //     var y = event.pageY - pantalla.offsetTop;//restar de arriba
+
+    //     console.log(event);
+    //     alert(x + " x " + y);
+    // }
+    function dibujar(event) {
+        var x = event.pageX - pantalla.offsetLeft;//restar la derecha 
+        var y = event.pageY - pantalla.offsetTop;//restar de arriba
+
+        pincel.fillStyle="red";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+
+        console.log(x+" x "+y);
+    }
+
+    // pantalla.onclick = mostrarAlerta;
+    pantalla.onclick = dibujar;
+
+</script>

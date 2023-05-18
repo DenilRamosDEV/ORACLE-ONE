@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+    function html(mensaje) {
+            return document.write(mensaje);
+        }
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var intentos=3;
+    while (intentos>=1) {
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+    
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            html("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+            if (intentos == 1) {
+                    html("error de loguin");
+                }
+            intentos--;
+        }
+    }
+</script>

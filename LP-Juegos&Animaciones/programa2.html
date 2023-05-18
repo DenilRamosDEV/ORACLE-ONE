@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        function cuadrado(x, y, color) {
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+            pincel.fillStyle = color;//caracteristica
+            pincel.fillRect(x, y, 50, 50);//funcion
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x, y, 50, 50);//borde
+        }
+
+        var x=0;
+        while (x<600) {
+            cuadrado(x,0,"red")
+            cuadrado(x,50,"white")
+            cuadrado(x,100,"red")
+            x+=50;
+        }
+
+    </script>
+</body>
+
+</html>

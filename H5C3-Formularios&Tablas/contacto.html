@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contacto - Barbería Alura</title>
+    <link rel="stylesheet" href="../H5C3-ListasNav&Posicionamiento/reset.css">
+    <link rel="stylesheet" href="../H5C3-ListasNav&Posicionamiento/style.css">
+
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1>
+                <img src="../H5C3-ListasNav&Posicionamiento/imagenes/logo.png" alt="logo de la Barbería Alura">
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="../H5C3-MiPrimeraWeb/index.html">Home</a></li>
+                    <li><a href="../H5C3-ListasNav&Posicionamiento/productos.html">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-contacto">
+        <form>
+            <fieldset>
+                <label for="nombre-apellido">Nombre y Apellidos</label>
+                <input type="text" id="nombre-apellido" class="input-padron" required placeholder="nombre y apellido">
+            </fieldset>
+            <fieldset>
+                <label for="correo">e-mail</label>
+                <input type="email" id="correo" class="input-padron" required placeholder="email@gmail.com">
+            </fieldset>
+            <fieldset>
+                <label for="telefono">phone</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="+51 xxxxxxxxx">
+            </fieldset>
+            <fieldset>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" cols="70" rows="10" class="input-padron"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>¿Cómo le gustaría que le contactemos?</legend>
+                <label for="r-email"><input type="radio" name="contacto" id="r-email" value="email">Email</label>
+                <label for="r-telefono"><input type="radio" name="contacto" id="r-telefono" value="telefono">Telefono</label>
+                <label for="r-whatsapp"><input type="radio" name="contacto" id="r-whatsapp" value="whatsapp" checked>WhatsApp</label>
+            </fieldset>
+            <fieldset>
+                <legend>¿En cual horario prefiere ser atendido?</legend>
+                <select>
+                    <option value="">Mañana</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noche</option>
+                </select>
+            </fieldset>
+            <div>
+                <label class="chackbox"><input type="checkbox" checked>¿le guataría resibir nobedade de la Barbería Alura?</label>
+            </div>
+            <input type="submit" value="Enviar datos" class="enviar">
+        </form>
+        <div>
+            <p class="horario">Horarios de atencion</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horrario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>8:00 a.m. - 8:00 p.m.</td>
+                    </tr>
+                    <tr>
+                        <td>Martes</td>
+                        <td>8:00 a.m. - 8:00 p.m.</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>8:00 a.m. - 8:00 p.m.</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>8:00 a.m. - 8:00 p.m.</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>8:00 a.m. - 8:00 p.m.</td>
+                    </tr>
+                </tbody>                
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <img src="../H5C3-ListasNav&Posicionamiento/imagenes/logo-blanco.png" alt="logo de la Barbería Alura">
+        <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
+    </footer>
+</body>
+</html>
